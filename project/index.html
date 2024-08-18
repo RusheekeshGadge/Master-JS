@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello and welcome</h1>
+    <button id="stop">stop</button>
+    <div id="s">pass1</div>
+</body>
+<script>
+    const sayRusheekesh =function(){
+       document.querySelector("h1").innerHTML = "this function works"
+    }
+    const pass1 =function(){
+        document.querySelector("div").innerHTML ="i am the best"
+    }
+    setTimeout(sayRusheekesh,10000)
+    const stop =setTimeout(pass1,5000)
+    document.querySelector("#stop").
+    addEventListener("click",function(){
+        clearTimeout(stop)
+        console.log("the event has been stopped")
+        })
+</script>
+</html>
