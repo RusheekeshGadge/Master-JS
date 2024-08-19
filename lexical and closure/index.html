@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <buttun id="red" style="background-color: red;">red</buttun>
+    <buttun id="green" style="background-color: green;">green</buttun>
+</body>
+<script>
+    document.getElementById("red").onclick = function() {
+        document.body.style.backgroundColor = "red";
+    };
+    document.getElementById("green").onclick = function() {
+        document.body.style.backgroundColor = "green";
+    };
+
+    function clickhandler(color){
+        // document.body.style.backgroundColor = `${color}`;
+        //everything turns purple without clicking it
+        return function(){
+        document.body.style.backgroundColor = `${color}`;
+
+        }
+    }
+    document.getElementById(`green`).onclick =clickhandler("purple")
+</script>
+</html>
