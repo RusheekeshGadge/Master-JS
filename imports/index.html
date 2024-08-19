@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module" >
+        //we cannot import wirhout the type module
+        //script.js should be in the same directory as index.html
+        //script.js should contain export const addition = (a, b) => a + b;
+
+        //we cannot import the files if the http file is not running on the server
+
+
+        //we can import the function like {addition as add}
+        //and can use as like add(3,7)
+
+
+        //import with an alias
+        //we can also export file from javascript like export{addition as sum}
+        //and we can import as {sum}
+        import {addition} from './script.js';
+        console.log(addition(5, 3));
+
+        //import all named exports
+        //import * as all from './script.js';
+        //console.log(all.addition(5, 3));
+        //but the modules we are not using but imported gets deleted
+        //so it is not a good practice to import all named exports
+        //thats called tree shaking
+
+        //import default 
+        // import addition from './script.js';
+        //in the defaukt export import only one file has one module
+        //that can be increases the number of files
+        //import sum from './script.js'
+        //it will work perfectly fine even if we didnt export as sum because the file has only one module 
+        //and you can make file without function name also
+
+    </script>
+</body>
+</html>
